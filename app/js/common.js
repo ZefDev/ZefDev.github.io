@@ -14,10 +14,10 @@ $(function() {
 	});
 	$(".next").click(function(){
 		owl.trigger('next.owl.carousel');
-	})
+	});
 	$(".prev").click(function(){
 		owl.trigger('prev.owl.carousel');
-	})
+	});
 	
 	//SVG Fallback
 	if(!Modernizr.svg) {
