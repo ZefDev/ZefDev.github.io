@@ -1,0 +1,305 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/owl.carousel/dist/assets/owl.carousel.min"
+
+
+.load
+	background-color: red
+	width: 100%
+	height: 100%
+	z-index: 5
+	position: fixed
+	top: 100px
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: "RobotoCondensedRegular", sans-serif
+	overflow-x: hidden
+	color: $accent-color
+.hidden
+	display: none
+a
+	outline: none!important
+	text-decoration: none;
+a:hover
+	text-color: yellow
+	text-decoration: none;
+strong, b,
+	font-family: "RobotoLight", sans-serif
+	font-weight: normal
+h1,h2,h3,h4, .button
+	font-family: RobotoCondensedBold, serif	
+	font-weight: normal
+	color: $accent-color
+	
+.ishome
+	font-family: RobotoCondensedBold, serif	
+	font-weight: normal
+	text-color: $text-color
+.top-line
+	background-color: $main-color
+	text-align: center
+	border-bottom: lighten($main-color,7%) 1px solid
+	position: relative
+	z-index: 2
+	
+	ul>li
+		border-top: none
+		list-style-type:none
+		background-color: transparent	
+	.sf-menu
+		margin: 0 auto -6px
+		display: inline-block
+		float: none
+		align: center
+		font-family: RobotoCondensedBold, serif	
+		font-size: 15px
+		border: 0
+		border-top: none
+		text-color: $text-color
+		background-color: $main-color
+		z-index: 1
+		
+		ul,li
+			list-style-type:none
+			background-color: $main-color
+			&.active
+				a
+					color: $accent-color
+				background-color: darken($main-color,3%)
+		ul:hover,li:hover
+			list-style-type:none
+			background-color: darken($main-color,3%)
+		a
+			padding: 25px 28px 25px
+			color: $text-color
+			border-left: none
+			border-top: none
+			text-decoration: none;
+			font-family: "RobotoCondensedBold", sans-serif
+		a:hover
+			a
+			color: $accent-color
+			text-decoration: none;
+		
+.top-pannel
+	background-color: rgba(lighten($main-color,5%), .8)
+	min-width: 200px 
+	min-height: 200px 
+	color: #FFF
+	padding-top: 30px
+	padding-left: 50px
+	position: relative
+	z-index: 1
+	box-shadow: rgba(255,255,255,.03) 0 5px 0 10px 
+	&-content
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url(../img/top-pannel-bg.jpg)
+		z-index: 0
+		opacity: .16
+	&-box
+		padding-top: 0px
+		padding-left: 0px
+		h4
+			font-family: "RobotoCondensedRegular", sans-serif
+			font-size: 15 px
+			marging-top: -20px
+			position: relative
+			&::after
+				content: ''
+				height: 1px
+				width: 100%
+				background-color: $accent-color
+				position: absolute
+				left: 0
+				bottom: -10px
+				opacity: .4
+		ul,li
+			padding: 0
+			marging: 0
+			list-style-type: none
+		li
+			display: inline-block
+			font-size: 13px
+			opacity .35
+			padding: 10 0 10 10
+.logo
+	img
+		padding-top: 20px
+		max-width: 100%
+.button
+	color: #111
+	background-color: $accent-color
+	border-radius: 2px
+	font-size: 16px
+	align: center
+	padding: 10px 30px
+	overflow: hidden
+	border: 0
+	text-decoration: none;
+	transition: background-color .25s ease
+	&:hover
+		text-decoration: none
+		background-color: lighten($accent-color, 12%)
+	&:active
+		background-color: darken($accent-color, 12%)
+		text-decoration: none;
+	&-small
+		color: #111
+		background-color: $accent-color
+		border-radius: 2px
+		font-size: 16px
+		padding: 6px 22px
+		overflow: hidden
+		border: 0
+		transition: background-color .25s ease
+		&::after
+			height: 2px
+.slider-wrap
+	.slider-nav-container
+		position: relative
+	.slider-nav	
+		position: absolute
+		width: 100%
+		z-index: 2
+		font-size: 24px
+		color: #fff
+		div
+			cursor: pointer
+			position: absolute
+			top: 250px
+			&:last-child
+				right: 0
+.slider
+	position: absolute
+	top: 0
+	width: 100%
+	.owl-dots
+		position: absolute
+		bottom: 10px
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			marging: 0 10px
+			width: 14px
+			height: 14px
+			background-color: darken($main-color, 10%)
+			border-radius: 10em
+			cursor: pointer
+			transition: background-color .25s ease
+			&.active
+				background-color: $accent-color
+	.slide-wrap
+		float: left
+		&.active
+			h2
+				opacity: 1
+				left: 0
+			p
+				left: 0
+				opacity: .75
+			.slide-img-wrap
+				opacity: 1
+				transform: scale(1)
+	.slide
+		padding-bottom: 50px
+		color: $text-color
+		position: relative
+		padding-top: 280px
+		h2
+			font-family: "RobotoCondensedLight", sans-serif
+			font-size: 32px
+			color: $text-color
+			marging-top: 0
+			marging-bottom: 22px
+			transition: all 1.5s ease
+			transition-delay: .25s
+			position: relative
+			left: 100px
+			opacity: 0
+			&:first-line
+				color: $accent-color
+		p
+			font-family: "RobotoLight", sans-serif
+			opacity: 0
+			position: relative
+			marging-bottom: 40px
+			left: 100px
+			transition: all 1.5s ease
+			transition-delay: .5s
+		&-bg
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background-size: cover
+			&::before
+				content: ''
+				background-color: $main-color
+				top: 0
+				width: 100%
+				height: 100%
+				position: absolute
+				opacity: .85
+		&-content
+			position: relative
+			z-index: 1
+			padding-top: 80px
+.slide-img-wrap
+	width: 100%
+	padding-top: 30px
+	opacity: 0
+	transform: scale(.8)
+	transition: all 1s ease
+	transition-delay: .30s
+.sect-teaser
+	background-color: $main-color;
+	color: #fff
+	position: relative
+	font-size: 16px
+	top: 481px
+	width: 100%
+	height: 100px
+.teaser-item	
+	display: table-row
+	.teaser-count	
+		display: table-row	
+		&-wrap
+			width: 43px
+			height: 43px
+			position: relative
+			right: 10px
+			vertical-align: middle
+			top: 26px
+			.fa::before
+				font-size: 48px
+				color: lighten($main-color,10%)
+			.teaser-number
+				position: absolute
+				color: $accent-color
+				text-align: center
+				font-size: 22px
+				top: 7px
+				opacity: 1
+				font-family: "RobotoCondensedBold", sans-serif
+				width: 100%
+	.teaser-text
+		display: table-cell	
+		font-family: "RobotoCondensedLight", sans-serif
+		top: 20px
+		opacity: .28
+.service-item
+	border: 5px lighten($main-color, 6%) solid 
+	&-image
+		min-height: 190px
